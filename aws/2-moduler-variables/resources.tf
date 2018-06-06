@@ -2,6 +2,7 @@
 resource "aws_instance" "my-first-ec2" {
 	ami           = "ami-b46f48db"
   instance_type = "t2.micro"
+  key_name="myec2keypair"
     	  	
   tags{
   	Name="my-first-ec2-instance"
