@@ -17,26 +17,17 @@ resource "aws_instance" "my-first-ec2" {
     3]it is location of pem file. location of ppk file will throw error
     */
     private_key = "${file("C:/Users/ganesh13723/.ssh/myec2keypair.pem")}"
+  }
 
-      
-
-        
-    }
-
+  /**
+  Need to create dir before pushing file to remote server
+  */  
   provisioner "remote-exec" {
     inline = [
        "cd /home/ec2-user",
        "sudo mkdir mysoft",
        "sudo chown ec2-user mysoft"
     ]
-
-    /*
-   connection{
-        user="ec2-user"
-        private_key="./provision/config/security/private-key-myec2keypair.ppk"
-        timeout = "10m"
-      }
-    */  
   }
 
   provisioner "file"{
