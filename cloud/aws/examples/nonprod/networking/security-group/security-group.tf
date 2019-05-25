@@ -20,4 +20,11 @@ module "security-group"{
 	compliance="none"
 	aws_resource_assoc="elb"
 	environment="dev"
+	inbound_cidr_rules = 
+		{	
+			"0" = ["0.0.0.0/0", "80", "80", "TCP"] # Allow traffic from everywhere on port 80
+			"1" = ["54.246.130.115/32", "443", "443", "TCP"] # Allow traffice from IP 54.246.130.115 on port 443
+		}
+	
+	
 }
