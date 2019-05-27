@@ -12,6 +12,6 @@ module "vpc"{
 	seq_id="001"
 	environment="n"
 	cost_centre="infra"
-	build_date="11052018"
+	build_date="27052019"
 	version_id="001"
 }
