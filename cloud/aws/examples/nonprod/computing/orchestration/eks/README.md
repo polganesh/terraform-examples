@@ -2,7 +2,7 @@
 # Readme
 
 ## Configure - Post EKS cluster creation
-following are one times activities
+following are one time activities
 
 ### Configure kubectl
 following example assume we are using windows machine,but similar steps can be followed for other OS.
