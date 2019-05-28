@@ -17,5 +17,17 @@ it will copy config available from terraform output for module ekscluster in <us
 - execute it
 ![alt text](https://github.com/polganesh/wiki-images/blob/master/terraform-examples/output-config-map-with-nodes.JPG)
 
+### Configure Tiller (Helm Server)
+
+```
+
+kubectl -n kube-system create serviceaccount tiller
+
+kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+
+helm init --service-account tiller
+```
+
+
 ### K8s Dashboard Configuration
 [[Refer](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html)]
