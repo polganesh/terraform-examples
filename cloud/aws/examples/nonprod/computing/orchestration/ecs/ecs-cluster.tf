@@ -1,8 +1,8 @@
 module "ecscluster"{
-	source="../../../modules/ecs/ecs-cluster"
+	source="git::https://github.com/polganesh/terraform-modules.git//cloud/aws/computing/orchestration/ecs"
 	vpc_seq_id="001"
 	seq_id="001"
-	# we need to create custom image in our AWS account. as AWS used to change images frequetly.
+	# we need to create custom image in our AWS account. 
 	# just to avoid this we need to create custom image
 	# please note this must be ECS optimized.
 	image_id="ami-0d14e906130bb0f70"
